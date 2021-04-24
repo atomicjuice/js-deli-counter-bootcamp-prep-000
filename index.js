@@ -1,9 +1,10 @@
 
-
+num = 0
   
-function takeANumber(line,name){
-  line.push(name)
-  return `Welcome, ${name}. You are number ${line.length} in line.`
+function takeANumber(line){
+  num++
+   line.push(num) 
+  return `Welcome, your number ${num}. You are number ${line.length} in line.`
 }
 
 
@@ -26,11 +27,11 @@ function currentLine(katzDeli) {
   var i = 0;
   while (i < katzDeli.length) {
     line.push(` ` + [i+1]+`. `  + katzDeli[i])
-    i++;
+    i++;//i++ is the equivalent of i = i + 1
   
   } 
   return(`The line is currently:` + line);
-}
+} 
   
 
 
